@@ -30,6 +30,10 @@ set softtabstop=4
 set shiftwidth=2
 set tabstop=4
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = ''
+
 "Shift + Tab writes hard tab
 inoremap <S-Tab> <C-V><Tab>
 "Ctrl + Tab does inverse tab

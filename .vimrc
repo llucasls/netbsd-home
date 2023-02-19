@@ -52,6 +52,7 @@ nnoremap <PageDown> :hide bnext <cr>
 nnoremap <Home> :hide bfirst <cr>
 nnoremap <End> :hide blast <cr>
 nnoremap <Del> :bdelete! <cr>
+nnoremap <F5> :w<cr> :!python %<cr>
 "nnoremap <Insert> :hide enew <cr>
 
 "Remap the j, k, 0 and $ keys to gj, gk, g0 and g$ in normal mode

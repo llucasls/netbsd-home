@@ -1,0 +1,25 @@
+#	$NetBSD: dot.shrc,v 1.3 2007/11/24 11:14:42 pavel Exp $
+
+if [ -f /etc/shrc ]; then
+	. /etc/shrc
+fi
+
+PAGER=less
+export PAGER
+
+case "$-" in *i*)
+	# interactive mode settings go here
+	. /home/lucas/.prompt.ksh
+
+	if test $(id -u) != 0; then
+		alias ls=exa
+		alias reboot='doas reboot'
+		alias shutdown='doas halt -p'
+
+		PS1="$(user_prompt)"
+	else
+		PS1="$(root_prompt)"
+	fi
+	export PS1
+	;;
+esac
